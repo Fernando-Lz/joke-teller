@@ -9,4 +9,57 @@ body {
   min-height: 100vh;
   font-size: 62.5%; /* 10px */
   overflow-x: hidden;
+  background-color: #45badd;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: url('./robot.gif') no-repeat;
+  background-size: contain;
+  background-position: left center;
+}
+
+button {
+  cursor: pointer;
+  outline: none;
+  width: 20rem;
+  height: 5rem;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 2rem;
+  color: #fff;
+  background-color: #ff3482;
+  border: none;
+  border-radius: 0.5rem;
+  box-shadow: 0.2rem 0.2rem 2rem 1rem rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+  filter: brightness(90%);
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+button:disabled {
+  cursor: default;
+  filter: brightness(30%);
+}
+
+/* Tablet or Smaller */
+
+@media screen and (max-width: 1000px) {
+  .container {
+    background-size: cover;
+    background-position: center center;
+  }
+
+  button {
+    box-shadow: 0.5rem 0.5rem 3rem 2rem rgba(0, 0, 0, 0.5);
+  }
 }
